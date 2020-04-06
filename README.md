@@ -5,8 +5,12 @@
 ## Development Team
 
 * Venish patel
- * [GitHub](https://github.com/wanicepatel1210)
- * [portfolio](https://venishpatel.com)
+  * Student at [Cal State Eastbay](https://www.csueastbay.edu/)
+  * [GitHub](https://github.com/wanicepatel1210)
+  * [portfolio](https://venishpatel.com)
+  * [linkedIn](https://www.linkedin.com/in/venish-patel/)
   
 * Nimesh Patel
- * Company: [Google](https://www.google.com/)
+  * Software Engineer at [Google](https://www.google.com/)
+  * [linkedIn](https://www.linkedin.com/in/nimeshvpatel/)
+  
