@@ -32,17 +32,44 @@ body {
 }
 
 .top-header {
-    text-align: center;
+
     .navigation {
-        background-color: var(--secondary-bg-color);
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        background-color: #000000ee;
+
+        .closebtn {
+            position: absolute;
+            font-size: 15vw;
+            top: 0;
+            right: 5vw;
+        }
 
         .nav-list {
-            display: flex;
+            position: relative;
+            top: 10vh;
+            width: 100%;
+            text-align: center;
 
             .nav-list-item {
-                flex: 1;
+                font-size: 6vw;
+                display: block;
+                padding: 5vh 0;
             }
         }
+    }
+
+    .nav-bar-icon {
+        cursor: pointer;
+        float: right;
+        font-size: 10vw;
+        padding: 0 2vw;
     }
 }
 
@@ -69,6 +96,7 @@ body {
         background-color: var(--secondary-bg-color);
         text-align: center;
         margin-top: 3vh;
+        padding: 1vh 0;
     }
     .state-person {
         display: flex;

@@ -32,20 +32,43 @@ a:hover {
 }
 
 .top-header .navigation {
-  background-color: var(--secondary-bg-color);
-  text-align: center;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #000000ee;
+}
+
+.top-header .navigation .closebtn {
+  position: absolute;
+  font-size: 15vw;
+  top: 0;
+  right: 5vw;
 }
 
 .top-header .navigation .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  text-align: center;
 }
 
 .top-header .navigation .nav-list .nav-list-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  font-size: 6vw;
+  display: block;
+  padding: 5vh 0;
+}
+
+.top-header .nav-bar-icon {
+  cursor: pointer;
+  float: right;
+  font-size: 10vw;
+  padding: 0 2vw;
 }
 
 .tile {

@@ -12,20 +12,19 @@
 <body>
     <header class="top-header">
         <nav class="navigation">
-            <ol class="nav-list">
-                <li class="nav-list-item"><a href="http://motabargamkps.org/us">Home</a></li>
-                |
-                <li class="nav-list-item"><a target="_blank"
-                        href="https://docs.google.com/spreadsheets/d/15BY5_HD8zeFpTDAm_9APVG46Ma_m2_dRWiOeL8pLhgk/edit?usp=sharing">Members</a>
-                </li>
-                |
-                <li class="nav-list-item"><a href="">Register</a></li>
-                |
-                <li class="nav-list-item"><a href="./contact.html">Contact us</a></li>
-            </ol>
+            <a href="javascript:void(0)" onclick="closeNavBar()" class="closebtn">&times;</a>
+            <div class="nav-list">
+                <a href="http://motabargamkps.org/us" class="nav-list-item">Home</a>
+                <a target="_blank"
+                    href="https://docs.google.com/spreadsheets/d/15BY5_HD8zeFpTDAm_9APVG46Ma_m2_dRWiOeL8pLhgk/edit?usp=sharing"
+                    class="nav-list-item">Members</a>
+                <a href="" class="nav-list-item">Register</a>
+                <a href="./contact.html" class="nav-list-item">Contact us</a>
+            </div>
         </nav>
-        <a href="" onclick=""></a>
+        <div class="nav-bar-icon" onclick="openNavBar()">&#9776;</div>
     </header>
+    <hr style="width: 100%;">
     <main class="main">
         <section class="photo-gallery">
             <img src="../images/umiya_mata.jpg" alt="" class="umiya-mata-photo">
@@ -47,6 +46,7 @@
     <footer>
         <section class="contact-us" id="contact-us"></section>
     </footer>
+    <script src="./scripts/header.js"></script>
 </body>
 
 </html>
