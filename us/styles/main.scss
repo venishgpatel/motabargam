@@ -1,5 +1,5 @@
 :root {
-    --font-size: 2vw;
+    --font-size: 3vw;
     --bg-color: #ffffff;;
     --secondary-bg-color: #cfd8dc;
     --primary-font-color: #313b44;
@@ -9,12 +9,10 @@
 * {
     margin: 0;
     padding: 0;
-    line-height: 2.5;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
     letter-spacing: 0.15vw;
-    text-align: center;
     font-size: var(--font-size);
     color: var(--primary-font-color);
 }
@@ -27,14 +25,15 @@ a:hover {
     color: var(--primary-font-color);
 }
 
-body {
-    width: 95vw;
-    margin: auto;
+.main {
+    margin-top: 2vh;
 }
 
 .top-header {
+
     .navigation {
         background-color: var(--secondary-bg-color);
+        text-align: center;
 
         .nav-list {
             display: flex;
@@ -47,28 +46,32 @@ body {
 }
 
 .tile {
-    
-    .tile-header {
+    margin: 3vh 0;
+    padding: 0 5vw;
 
-        p{
-            font-size: 3vw;
+    .tile-header {
+        text-align: center;
+        
+        div {
+            font-size: 4vw;
             line-height: 1.5;
-            font-weight: bold;
             color: var(--secondary-font-color);
         }
         
     }
 
     .tile-content {
+        padding-top: 2vh;
         text-align: justify;
         font-weight: 500;
+        line-height: 2;
     }
 }
 
 .photo-gallery {
-    margin: 2vh 0;
+    text-align: center;
 
     .umiya-mata-photo {
-        width: 80%;
+        width: 90%;
     }
 }

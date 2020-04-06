@@ -1,5 +1,5 @@
 :root {
-    --font-size: 2vw;
+    --font-size: 3vw;
     --bg-color: #ffffff;;
     --secondary-bg-color: #cfd8dc;
     --primary-font-color: #313b44;
@@ -9,7 +9,6 @@
 * {
     margin: 0;
     padding: 0;
-    line-height: 2.5;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -45,33 +44,39 @@ body {
         }
     }
 }
-.page-link {
 
-    .contact-icon {
-        margin: 0 10vw;
-        width: 10%;
+.main {
+    margin-top: 2vh;
+}
+
+.page-link {
+    .xyz {
+        height: 5vh;
+        margin: 2vh 0;
+
+        .contact-icon {
+            vertical-align: middle;
+            margin: 0 3vw;
+            width: 10%;
+        }
     }
 }
 
 .contact-person {
 
     .state {
-        font-weight: bold;
         background-color: var(--secondary-bg-color);
         text-align: center;
         margin-top: 3vh;
     }
     .state-person {
         display: flex;
-        margin: 1vh 3vw;
+        padding: 1vh 3vw;
+        background-color: #eceff1;
 
         .person {
             flex: 1;
-            font-weight: normal;
-
-            .name {
-                font-weight: bold;
-            }
+            line-height: 2;
         }
     }
 }

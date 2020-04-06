@@ -1,5 +1,5 @@
 :root {
-  --font-size: 2vw;
+  --font-size: 3vw;
   --bg-color: #ffffff;
   --secondary-bg-color: #cfd8dc;
   --primary-font-color: #313b44;
@@ -9,7 +9,6 @@
 * {
   margin: 0;
   padding: 0;
-  line-height: 2.5;
   list-style-type: none;
   text-decoration: none;
   -webkit-box-sizing: border-box;
@@ -52,13 +51,22 @@ body {
           flex: 1;
 }
 
-.page-link .contact-icon {
-  margin: 0 10vw;
+.main {
+  margin-top: 2vh;
+}
+
+.page-link .xyz {
+  height: 5vh;
+  margin: 2vh 0;
+}
+
+.page-link .xyz .contact-icon {
+  vertical-align: middle;
+  margin: 0 3vw;
   width: 10%;
 }
 
 .contact-person .state {
-  font-weight: bold;
   background-color: var(--secondary-bg-color);
   text-align: center;
   margin-top: 3vh;
@@ -68,17 +76,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1vh 3vw;
+  padding: 1vh 3vw;
+  background-color: #eceff1;
 }
 
 .contact-person .state-person .person {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-weight: normal;
-}
-
-.contact-person .state-person .person .name {
-  font-weight: bold;
+  line-height: 2;
 }
 /*# sourceMappingURL=contact.css.map */
