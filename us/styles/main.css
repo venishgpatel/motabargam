@@ -1,0 +1,71 @@
+:root {
+  --font-size: 2vw;
+  --bg-color: #ffffff;
+  --secondary-bg-color: #cfd8dc;
+  --primary-font-color: #313b44;
+  --secondary-font-color: #2962ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 2.5;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 0.15vw;
+  text-align: center;
+  font-size: var(--font-size);
+  color: var(--primary-font-color);
+}
+
+a {
+  color: var(--secondary-font-color);
+}
+
+a:hover {
+  color: var(--primary-font-color);
+}
+
+body {
+  width: 95vw;
+  margin: auto;
+}
+
+.top-header .navigation {
+  background-color: var(--secondary-bg-color);
+}
+
+.top-header .navigation .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-header .navigation .nav-list .nav-list-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.tile .tile-header p {
+  font-size: 3vw;
+  line-height: 1.5;
+  font-weight: bold;
+  color: var(--secondary-font-color);
+}
+
+.tile .tile-content {
+  text-align: justify;
+  font-weight: 500;
+}
+
+.photo-gallery {
+  margin: 2vh 0;
+}
+
+.photo-gallery .umiya-mata-photo {
+  width: 80%;
+}
+/*# sourceMappingURL=main.css.map */
