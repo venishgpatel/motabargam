@@ -15,6 +15,7 @@
           box-sizing: border-box;
   letter-spacing: 0.15vw;
   font-size: var(--font-size);
+  font-family: "Comfortaa", serif;
   color: var(--primary-font-color);
 }
 
