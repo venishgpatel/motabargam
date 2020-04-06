@@ -5,8 +5,8 @@
 ## Development Team
 
 * Venish patel
-  *[GitHub](https://github.com/wanicepatel1210)
-  *[portfolio](https://venishpate.com)
+ * [GitHub](https://github.com/wanicepatel1210)
+ * [portfolio](https://venishpatel.com)
   
 * Nimesh Patel
-  *Company: [Google}(https://google.com)
+ * Company: [Google](https://www.google.com/)
