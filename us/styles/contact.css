@@ -20,11 +20,11 @@
 }
 
 a {
-  color: var(--secondary-font-color);
+  color: #78909c;
 }
 
 a:hover {
-  color: var(--primary-font-color);
+  color: #ffffff;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #000000ee;
+  background-color: #263238fc;
 }
 
 .top-header .navigation .closebtn {

@@ -1,5 +1,5 @@
 :root {
-    --font-size: 3vw;
+    --font-size: 4vw;
     --bg-color: #ffffff;;
     --secondary-bg-color: #cfd8dc;
     --primary-font-color: #313b44;
@@ -19,11 +19,11 @@
 }
 
 a {
-    color: var(--secondary-font-color)
+    color: #78909c;
 }
 
 a:hover {
-    color: var(--primary-font-color);
+    color: #ffffff;
 }
 
 .main {
@@ -41,7 +41,7 @@ a:hover {
         right: 0;
         overflow-x: hidden;
         transition: 0.5s;
-        background-color: #000000ee;
+        background-color: #263238fc;
 
         .closebtn {
             position: absolute;
@@ -79,12 +79,12 @@ a:hover {
     .tile-header {
         text-align: center;
         
-        div {
-            font-size: 4vw;
+        .welcome {
+            font-size: 5vw;
             line-height: 1.5;
-            color: var(--secondary-font-color);
+            color: #795548;
+            font-weight: bold;
         }
-        
     }
 
     .tile-content {
