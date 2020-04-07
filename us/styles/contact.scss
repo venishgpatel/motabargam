@@ -6,6 +6,12 @@
     --secondary-font-color: #2962ff;
 }
 
+@media screen and (min-width: 1366px) {
+    :root {
+        --font-size: 1.5vw;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,13 +24,7 @@
     color: var(--primary-font-color);
 }
 
-a {
-    color: #78909c;
-}
 
-a:hover {
-    color: #ffffff;
-}
 
 body {
     width: 95vw;
@@ -42,7 +42,15 @@ body {
         right: 0;
         overflow-x: hidden;
         transition: 0.5s;
-        background-color: #263238fc;
+        background-color: #263238fb;
+
+        a, a:visited {
+            color: #78909c;
+        }
+        
+        a:hover {
+            color: #ffffff;
+        }
 
         .closebtn {
             position: absolute;
@@ -73,22 +81,91 @@ body {
     }
 }
 
+@media screen and (min-width: 1366px) {
+    .top-header{
+        width: 90vw;
+        margin: auto;
+
+        .navigation {
+            width: 100%;
+            height: fit-content;
+            position: static;
+            transition: 0s;
+
+            .closebtn {
+                display: none;
+            }
+
+            .nav-list {
+                position: static;
+                width: 100%;
+                top: 0;
+                display: flex;
+                text-align: center;
+
+                .nav-list-item {
+                    font-size: 2vw;
+                    flex: 1;
+                    padding: 2vh 0;
+                }
+
+                .vr-line-symbol {
+                    display: block;
+                    color: #fff;
+                    font-size: 2vw;
+                    padding: 2vh 0;
+                }
+            }
+        }
+
+        .nav-bar-icon {
+            display: none;
+        }  
+    }
+
+    .hr-line {
+        display: none;
+    }
+}
+
 .main {
     margin-top: 2vh;
 }
 
 .page-link {
     .xyz {
-        height: 5vh;
+        height: fit-content;
         margin: 2vh 0;
+
+        a, a:visited {
+            color: blue;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
 
         .contact-icon {
             vertical-align: middle;
             margin: 0 3vw;
-            width: 10%;
+            width: 5%;
         }
     }
 }
+
+@media screen and (min-width: 1366px) {
+    .page-link {
+
+        .xyz {
+
+            .contact-icon {
+
+            }
+        }
+    }
+}
+
+
 
 .contact-person {
 
