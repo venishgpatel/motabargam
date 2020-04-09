@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/{{css}}.css">
+</head>
+
+<body>
+  <header class="top-header">
+    <nav class="navigation">
+      <a href="javascript:void(0)" onclick="closeNavBar()" class="closebtn">&times;</a>
+      <div class="nav-list">
+        <a href="/" class="nav-list-item">Home</a>
+        <span class="vr-line-symbol">&#124;</span>
+        <a href="./member.html" class="nav-list-item">Members</a>
+        <span class="vr-line-symbol">&#124;</span>
+        <a href="#" class="nav-list-item">Register</a>
+        <span class="vr-line-symbol">&#124;</span>
+        <a href="/contact" class="nav-list-item">Contact us</a>
+      </div>
+    </nav>
+    <div class="nav-bar-icon" onclick="openNavBar()">&#9776;</div>
+  </header>
+  <hr style="width: 100%;" class="hr-line">
+
+  {{{body}}}
+
+  <footer>
+    <section class="contact-us" id="contact-us"></section>
+  </footer>
+  <script src="../scripts/header.js"></script>
+</body>
+
+</html>

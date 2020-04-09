@@ -1,0 +1,131 @@
+:root {
+  --extra-small-font: 2vw;
+  --small-font: 2.5vw;
+  --regular-font: 3vw;
+  --large-font: 4.5vw;
+  --extra-large-font: 8vw;
+}
+
+@media (min-width: 1366px) {
+  :root {
+    --extra-small-font: 0.5vw;
+    --small-font: 1vw;
+    --regular-font: 1.5vw;
+    --large-font: 2vw;
+    --extra-large-font: 3vw;
+  }
+}
+
+:root {
+  font-family: "Comfortaa", serif;
+  font-size: var(--regular-font);
+  color: #263238;
+  letter-spacing: 0.15vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.top-header .navigation {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #607d8b;
+  overflow-x: hidden;
+  background-color: #263238fb;
+}
+
+.top-header .navigation a, .top-header .navigation a:visited {
+  color: #607d8b;
+}
+
+.top-header .navigation a:hover {
+  color: #ffffff;
+}
+
+.top-header .navigation .closebtn {
+  position: absolute;
+  font-size: calc(var(--extra-large-font) + 4vw);
+  top: 0;
+  right: 6vw;
+}
+
+.top-header .navigation .nav-list {
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  text-align: center;
+  font-size: var(--large-font);
+}
+
+.top-header .navigation .nav-list .nav-list-item {
+  display: block;
+  padding: 5vh 0;
+}
+
+.top-header .navigation .nav-list .vr-line-symbol {
+  display: none;
+}
+
+.top-header .nav-bar-icon {
+  cursor: pointer;
+  float: right;
+  padding: 0 3vw;
+  font-size: var(--extra-large-font);
+}
+
+@media (min-width: 1366px) {
+  .top-header {
+    width: 90vw;
+    margin: auto;
+  }
+  .top-header .navigation {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: static;
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
+  .top-header .navigation .closebtn {
+    display: none;
+  }
+  .top-header .navigation .nav-list {
+    position: static;
+    width: 100%;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+  }
+  .top-header .navigation .nav-list .nav-list-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 2vh 0;
+  }
+  .top-header .navigation .nav-list .vr-line-symbol {
+    display: block;
+    padding: 2vh 0;
+  }
+  .top-header .nav-bar-icon {
+    display: none;
+  }
+  .hr-line {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
