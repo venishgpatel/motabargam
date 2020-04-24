@@ -1,0 +1,59 @@
+:root {
+  --extra-small-font: 2vw;
+  --small-font: 2.5vw;
+  --regular-font: 3vw;
+  --large-font: 4.5vw;
+  --extra-large-font: 8vw;
+}
+
+@media (min-width: 1366px) {
+  :root {
+    --extra-small-font: 0.8vw;
+    --small-font: 1vw;
+    --regular-font: 1.2vw;
+    --large-font: 1.5vw;
+    --extra-large-font: 3vw;
+  }
+}
+
+:root {
+  --extra-small-font: 2vw;
+  --small-font: 2.5vw;
+  --regular-font: 3vw;
+  --large-font: 4.5vw;
+  --extra-large-font: 8vw;
+}
+
+@media (min-width: 1366px) {
+  :root {
+    --extra-small-font: 0.8vw;
+    --small-font: 1vw;
+    --regular-font: 1.2vw;
+    --large-font: 1.5vw;
+    --extra-large-font: 3vw;
+  }
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.main .message {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: red;
+  font-size: var(--extra-large-font);
+}
+
+.main .message p {
+  padding: 1vh 0;
+}
+/*# sourceMappingURL=register.css.map */

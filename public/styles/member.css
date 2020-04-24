@@ -1,1 +1,130 @@
-/* No CSS *//*# sourceMappingURL=member.css.map */
+:root {
+  --extra-small-font: 2vw;
+  --small-font: 2.5vw;
+  --regular-font: 3vw;
+  --large-font: 4.5vw;
+  --extra-large-font: 8vw;
+}
+
+@media (min-width: 1366px) {
+  :root {
+    --extra-small-font: 0.8vw;
+    --small-font: 1vw;
+    --regular-font: 1.2vw;
+    --large-font: 1.5vw;
+    --extra-large-font: 3vw;
+  }
+}
+
+.main {
+  margin-top: 3vh;
+}
+
+.list-form {
+  width: 90vw;
+  margin: 0 auto 3vh auto;
+  background-color: #eceff1;
+  border-radius: 1vw;
+}
+
+.list-form .form-input {
+  border: none;
+  margin: 1vh 0;
+  padding: 0.5vh 2vw;
+  text-align: center;
+  border-radius: 1vw;
+  font-size: var(--regular-font);
+}
+
+.sort {
+  text-align: right;
+  margin: 0 5vw;
+}
+
+.sort .sort-option {
+  font-size: var(--regular-font);
+}
+
+.contact-person {
+  display: block;
+  width: 90vw;
+  margin: auto;
+}
+
+.contact-person .person-tile {
+  padding: 1vh 2vw;
+  margin: 1vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #eceff1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-person .person-tile .person {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+.contact-person .person-tile .person .person-info {
+  padding: 0.5vh 0;
+}
+
+.contact-person .person-tile .view-family {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.contact-person .person-tile .view-family {
+  font-size: var(--regular-font);
+  border: none;
+  padding: 0.5vh 2vw;
+  background-color: #263238;
+  color: #eceff1;
+  border-radius: 1vw;
+}
+
+.family {
+  width: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-x: hidden;
+  margin: auto;
+  color: #263238;
+  background-color: #ffffff;
+}
+
+.family .familyClosebtn {
+  position: absolute;
+  font-size: calc(var(--extra-large-font) + 4vw);
+  top: 0;
+  right: 6vw;
+  z-index: 1;
+}
+
+.family .family-details {
+  width: 80%;
+  margin: auto;
+}
+
+.family .family-details .family-person {
+  position: relative;
+  top: 5vh;
+  margin: 2vh 0;
+  padding: 1vh 4vw;
+  background-color: #eceff1;
+}
+
+.family .family-details .family-person .family-person-info {
+  padding: 0.5vh 0;
+}
+/*# sourceMappingURL=member.css.map */

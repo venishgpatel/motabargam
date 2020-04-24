@@ -1,0 +1,105 @@
+@import "variables";
+
+.main {
+    margin-top: 3vh;
+}
+
+.list-form {
+    width: 90vw;
+    margin: 0 auto 3vh auto;
+    background-color: $light-blue-grey;
+    border-radius: 1vw;
+
+    .form-input {
+        border: none;
+        margin: 1vh 0;
+        padding: 0.5vh 2vw;
+        text-align: center;
+        border-radius: 1vw;
+        font-size: var(--regular-font);
+    }
+}
+
+.sort {
+    text-align: right;
+    margin: 0 5vw;
+
+    .sort-option {
+        font-size: var(--regular-font);
+    }
+}
+
+.contact-person {
+    display: block;
+    width: 90vw;
+    margin: auto;
+
+    .person-tile {
+        padding: 1vh 2vw;
+        margin: 1vh 0;
+        display: flex;
+        background-color: $light-blue-grey;
+        align-items: center;
+
+        .person {
+            flex:10;
+
+            .person-info {
+                padding: 0.5vh 0;
+            }
+        }
+
+        .view-family {
+            flex: 1;
+        }
+
+        .view-family {
+            font-size: var(--regular-font);
+            border: none;
+            padding: 0.5vh 2vw;
+            background-color: $dark-blue-grey;
+            color: $light-blue-grey;
+            border-radius: 1vw;
+        }
+    }
+}
+
+.family {
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
+    position: fixed;
+    transition: 0.5s;
+    overflow-x: hidden;
+    margin: auto;
+    color: $dark-blue-grey;
+    background-color: $white;
+
+    .familyClosebtn {
+        position: absolute;
+        font-size: calc(var(--extra-large-font) + 4vw);
+        top: 0;
+        right: 6vw;
+        z-index: 1;
+    }
+
+    .family-details {
+        width: 80%;
+        margin: auto;
+
+        .family-person {
+            position: relative;
+            top: 5vh;
+            margin: 2vh 0;
+            padding: 1vh 4vw;
+            background-color: $light-blue-grey;
+
+            .family-person-info {
+                padding: 0.5vh 0;
+            }
+        }
+    }
+}
+

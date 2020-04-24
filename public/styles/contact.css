@@ -8,10 +8,10 @@
 
 @media (min-width: 1366px) {
   :root {
-    --extra-small-font: 0.5vw;
+    --extra-small-font: 0.8vw;
     --small-font: 1vw;
-    --regular-font: 1.5vw;
-    --large-font: 2vw;
+    --regular-font: 1.2vw;
+    --large-font: 1.5vw;
     --extra-large-font: 3vw;
   }
 }
@@ -43,9 +43,11 @@ body {
   text-align: center;
   margin-top: 3vh;
   padding: 1vh 0;
+  border-radius: 1vh 1vh 0 0;
 }
 
 .contact-person .state-person {
+  border-radius: 0 0 1vh 1vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

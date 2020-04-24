@@ -8,10 +8,10 @@
 
 @media (min-width: 1366px) {
   :root {
-    --extra-small-font: 0.5vw;
+    --extra-small-font: 0.8vw;
     --small-font: 1vw;
-    --regular-font: 1.5vw;
-    --large-font: 2vw;
+    --regular-font: 1.2vw;
+    --large-font: 1.5vw;
     --extra-large-font: 3vw;
   }
 }
@@ -81,14 +81,16 @@
 .top-header .nav-bar-icon {
   cursor: pointer;
   float: right;
-  padding: 0 3vw;
+  padding: 0 5vw;
   font-size: var(--extra-large-font);
 }
 
 @media (min-width: 1366px) {
   .top-header {
-    width: 90vw;
+    width: 100vw;
     margin: auto;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .top-header .navigation {
     width: 100%;

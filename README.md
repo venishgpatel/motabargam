@@ -1,6 +1,6 @@
 # Mota Bar Gam Kadva Patidar Samaj
 
-* Checkout our website at <https://motabargamkps.org/us/>
+* Checkout our website at <https://motabargamkps.org/>
 
 ## Development Team
 

@@ -1,0 +1,42 @@
+@import "variables";
+
+.main {
+    width: 80vw;
+    margin: 1vh auto;
+    text-align: center;
+
+    .verification-info {
+        margin: 2vh 0;
+        text-align: justify;
+    }
+    
+    .authentication-form {
+        text-align: center;
+
+        .form-input {
+            border: none;
+            margin: 1vh 0;
+            padding: 0.5vh 2vw;
+            text-align: center;
+            border-radius: 1vw;
+            font-size: var(--large-font);
+        }
+
+        .email, .phone {
+            width: 80%;
+            background-color: $light-blue-grey;
+        }
+
+        .submit-button {
+            background-color: $dark-blue-grey;
+            color: $light-blue-grey;
+        }
+    }
+
+    .unauthenticate {
+        margin: 2vh auto;
+        color: red;
+    }
+}
+
+

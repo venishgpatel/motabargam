@@ -12,8 +12,23 @@
             </a>
         </div>
     </section>
-
     <section class="contact-person">
+        {{#each admin}}
+        {{#if_eq State ../admin.[@index].State}}
+        {{else}}
+        <div class="state">
+            <b>{{State}}</b>
+        </div>
+        {{/if_eq}}
+        <div class="state-person">
+            <section class="person">
+                <div class="name"><b>{{Name}}</b></div>
+                <div class="email">{{Email}}</div>
+                <div class="phone-number">{{Phone}}</div>
+            </section>
+        </div>
+        {{/each}}
+        <!--
         <div class="state">
             <b>California</b>
         </div>
@@ -29,61 +44,6 @@
                 <div class="phone-number">510-502-0405</div>
             </section>
         </div>
-        <div class="state">
-            <b>Florida</b>
-        </div>
-        <div class="state-person">
-            <section class="person">
-                <div class="name"><b>Girish Patel </b></div>
-                <div class="email">girish5295@gmail.com</div>
-                <div class="phone-number">561-603-5309</div>
-            </section>
-        </div>
-        <div class="state">
-            <b>Massachusetts</b>
-        </div>
-        <div class="state-person">
-            <section class="person">
-                <div class="name"><b>Smit Patel</b></div>
-                <div class="email">skpatel0211@gmail.com</div>
-                <div class="phone-number">781-600-8208</div>
-            </section>
-            <section class="person">
-                <div class="name"><b>Dipak Patel</b></div>
-                <div class="email">dipakpatel004@gmail.com</div>
-                <div class="phone-number">269-419-7397</div>
-            </section>
-        </div>
-        <div class="state">
-            <b>Mississippi</b>
-        </div>
-        <div class="state-person">
-            <section class="person">
-                <div class="name"><b>Ramesh Patel</b></div>
-                <div class="email">ericpatel999@gmail.com</div>
-                <div class="phone-number">601-927-0585</div>
-            </section>
-        </div>
-        <div class="state">
-            <b>New Jersey</b>
-        </div>
-        <div class="state-person">
-            <section class="person">
-                <div class="name"><b>Kalpesh Patel</b></div>
-                <div class="email"></div>
-                <div class="phone-number">732-309-9629</div>
-            </section>
-        </div>
-        <div class="state">
-            <b>Texas</b>
-        </div>
-        <div class="state-person">
-            <section class="person">
-                <div class="name"><b>Kaivalya Patel</b></div>
-                <div class="email">kcpatelindia@gmail.com</div>
-                <div class="phone-number">516-652-1891</div>
-            </section>
-        </div>
-
+        -->
     </section>
 </main>

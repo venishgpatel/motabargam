@@ -1,9 +1,9 @@
+let navBar = document.getElementsByClassName("navigation")[0];
+
 let openNavBar = function () {
-    let navBar = document.getElementsByClassName("navigation")[0];
-    navBar.style.width = "100%";
+    navBar.style.width = "100vw";
 }
 
 let closeNavBar = function () {
-    let navBar = document.getElementsByClassName("navigation")[0];
-    navBar.style.width = "0%";
+    navBar.style.width = "0";
 }
