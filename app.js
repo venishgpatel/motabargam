@@ -22,6 +22,11 @@ hbs.registerHelper('if_eq', function (arg1, arg2, options) {
   return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });
 
+hbs.registerHelper('dec', function(value, options)
+{   
+    return parseInt(value) - 1;
+});
+
 //app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

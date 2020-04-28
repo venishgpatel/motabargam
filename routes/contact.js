@@ -10,9 +10,9 @@ router.get('/', function (req, res, next) {
     db.query("SELECT * FROM admins", function (err, result, fields) {
         if (err) throw err;
         let admin = result;
-
+        console.log(admin);
         res.render('contact', {
-            title: 'contact us',
+            title: 'Contact us',
             css: 'contact',
             admin: admin
         });

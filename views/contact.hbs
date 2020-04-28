@@ -14,36 +14,18 @@
     </section>
     <section class="contact-person">
         {{#each admin}}
-        {{#if_eq State ../admin.[@index].State}}
-        {{else}}
-        <div class="state">
-            <b>{{State}}</b>
-        </div>
-        {{/if_eq}}
-        <div class="state-person">
-            <section class="person">
-                <div class="name"><b>{{Name}}</b></div>
-                <div class="email">{{Email}}</div>
-                <div class="phone-number">{{Phone}}</div>
+        <section class="admin">
+            <div class="state">
+                <b>{{State}}</b>
+            </div>
+            <div class="state-person">
+                <section class="person">
+                    <div class="name"><b>{{Name}}</b></div>
+                    <div class="email">{{Email}}</div>
+                    <div class="phone-number">{{Phone}}</div>
+                </section>
+            </div>
             </section>
-        </div>
         {{/each}}
-        <!--
-        <div class="state">
-            <b>California</b>
-        </div>
-        <div class="state-person">
-            <section class="person">
-                <div class="name"><b>Nimesh Patel</b></div>
-                <div class="email">nimvpatel@gmail.com</div>
-                <div class="phone-number">650-575-1277</div>
-            </section>
-            <section class="person">
-                <div class="name"><b>Mahesh Patel</b></div>
-                <div class="email">maheshgca@yahoo.com</div>
-                <div class="phone-number">510-502-0405</div>
-            </section>
-        </div>
-        -->
     </section>
 </main>

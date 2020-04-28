@@ -1,22 +1,65 @@
 @import "variables";
 
 .main {
-    margin-top: 3vh;
+    @media (min-width: #{$desktop-width}) {
+        display: flex;
+    }
 }
 
 .list-form {
-    width: 90vw;
-    margin: 0 auto 3vh auto;
+    position: fixed;
+    top: 1vh;
+    width: 100vw;
+    background-color: $white;
+    @include flexCenter();
+    justify-content: start;
+    z-index: 0.5;
     background-color: $light-blue-grey;
-    border-radius: 1vw;
-
-    .form-input {
-        border: none;
-        margin: 1vh 0;
-        padding: 0.5vh 2vw;
-        text-align: center;
-        border-radius: 1vw;
+    border-top: solid;
+    border-width: 5vh;
+    border-color: $light-blue-grey;
+    
+    
+    .form-content {
+        padding: 0 2vw;
         font-size: var(--regular-font);
+
+        .form-input {
+            border: none;
+            width: 25vw;
+            margin: 1vh 0;
+            padding: 1vh 2vw;
+            text-align: center;
+            border-radius: 1vw;
+            font-size: var(--regular-font);
+        }
+    }
+
+    @media (min-width: #{$desktop-width}) {
+        flex: 1;
+        display: block;
+        margin: 1vh 1vw;
+        height: 80vh;
+        text-align: center;
+        font-size: var(--regular-font);
+        position: sticky;
+        top: 9vh;
+
+        .form-content {
+            padding: 1vh 0;
+            
+            .form-input {
+                width: 80%;
+                border-radius: 0.5vh;
+            }
+        }
+
+        .list-by {
+            margin: 2vh 0;
+            background-color: $blue-grey;
+            color: $light-blue-grey;
+            border-radius: 0.5vh;
+        }
     }
 }
 
@@ -32,7 +75,18 @@
 .contact-person {
     display: block;
     width: 90vw;
-    margin: auto;
+    margin: 0 auto;
+
+    @media (min-width: #{$desktop-width}) {
+        flex: 4;
+        display: flex;
+        //@include flexCenter();
+        //align-items: flex-start;
+    }
+}
+
+.person-container {
+    flex: 1;
 
     .person-tile {
         padding: 1vh 2vw;
@@ -62,44 +116,98 @@
             border-radius: 1vw;
         }
     }
-}
 
-.family {
-    width: 0;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 1;
-    position: fixed;
-    transition: 0.5s;
-    overflow-x: hidden;
-    margin: auto;
-    color: $dark-blue-grey;
-    background-color: $white;
+    @media (min-width: #{$desktop-width}) {
+        flex: 1;
 
-    .familyClosebtn {
-        position: absolute;
-        font-size: calc(var(--extra-large-font) + 4vw);
-        top: 0;
-        right: 6vw;
-        z-index: 1;
-    }
+        .person-tile {
 
-    .family-details {
-        width: 80%;
-        margin: auto;
-
-        .family-person {
-            position: relative;
-            top: 5vh;
-            margin: 2vh 0;
-            padding: 1vh 4vw;
-            background-color: $light-blue-grey;
-
-            .family-person-info {
-                padding: 0.5vh 0;
+            .view-family {
+                border-radius: 1vh;
             }
         }
     }
 }
 
+.family-container {
+
+    .family {
+        width: 0;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1;
+        position: fixed;
+        transition: 0.5s;
+        overflow-x: hidden;
+        margin: auto;
+        color: $dark-blue-grey;
+        background-color: $white;
+    
+        .family-header {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background-color: $white;
+            border-bottom: solid;
+            border-color: $light-blue-grey;
+            border-width: 0.5vh;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+
+            .head-name {
+                flex: 7;
+                font-weight: bold;
+
+                .family-header-content {
+                    padding: 1vh 0;
+                }
+            }
+
+            .familyClosebtn {
+                font-size: calc(var(--extra-large-font) + 4vw);
+                right: 6vw;
+                z-index: 1;
+                flex: 1;
+            }
+        }
+    
+        .family-details {
+            width: 80%;
+            margin: auto;
+    
+            .family-person {
+                position: relative;
+                top: 5vh;
+                margin: 2vh 0;
+                padding: 1vh 4vw;
+                background-color: $light-blue-grey;
+    
+                .family-person-info {
+                    padding: 0.5vh 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width: #{$desktop-width}) {
+        flex: 0;
+
+        .family {
+            top: 8vh;
+            left: unset;
+            right: 0;
+
+            .familyClosebtn {
+                position: unset;
+                font-size: var(--extra-larger-font);
+            }
+
+            .family-details {
+                width: unset;
+                margin: 0 5vw;
+            }
+        }
+    }
+}

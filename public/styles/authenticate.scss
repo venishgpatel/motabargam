@@ -2,16 +2,22 @@
 
 .main {
     width: 80vw;
-    margin: 1vh auto;
+    margin: 5vh auto;
+    line-height: 1.5;
     text-align: center;
+    border-radius: 1vw;
+    box-shadow: 0 1vw 5vw #00000060;
+    background-color: $light-blue-grey;
 
     .verification-info {
         margin: 2vh 0;
         text-align: justify;
+        padding: 5vh 5vw 0 5vw;
     }
     
     .authentication-form {
         text-align: center;
+        padding: 5vh 5vw;
 
         .form-input {
             border: none;
@@ -24,7 +30,6 @@
 
         .email, .phone {
             width: 80%;
-            background-color: $light-blue-grey;
         }
 
         .submit-button {
@@ -34,8 +39,16 @@
     }
 
     .unauthenticate {
-        margin: 2vh auto;
         color: red;
+        text-align: justify;
+        padding: 5vh 5vw;
+    }
+}
+
+@media (min-width: #{$desktop-width}) {
+    .main {
+        width: 40vw;
+        margin: 10vh auto;
     }
 }
 

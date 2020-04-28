@@ -18,13 +18,28 @@
 }
 
 .top-header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: fit-content;
+    border-bottom: solid;
+    border-width: 0.5vh;
+    border-color: $light-blue-grey;
+    background-color: $white;
+    @include flexCenter();
+    text-align: center;
+    z-index: 1;
+
+    .title {
+        padding-left: 15vw;
+        flex: 10;
+    }
 
     .navigation {
         top: 0;
         right: 0;
         width: 0;
         height: 100vh;
-        z-index: 1;
         position: fixed;
         transition: 0.5s;
         color: $blue-grey;
@@ -69,6 +84,7 @@
         float: right;
         padding: 0 5vw;
         font-size: var(--extra-large-font);
+        flex: 1;
     }
 }
 
@@ -76,7 +92,11 @@
     .top-header{
         width: 100vw;
         margin: auto;
-        position: sticky;
+        height: fit-content;
+        
+        .title {
+            display: none;
+        }
 
         .navigation {
             width: 100%;
@@ -110,9 +130,5 @@
         .nav-bar-icon {
             display: none;
         }  
-    }
-
-    .hr-line {
-        display: none;
     }
 }

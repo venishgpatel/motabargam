@@ -30,3 +30,9 @@ $brown: #795548;
         --extra-large-font: 3vw;
     }
 }
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

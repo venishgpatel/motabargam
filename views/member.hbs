@@ -1,70 +1,84 @@
 <main class="main">
     <form action="/member/search" method="post" class="list-form">
+        <div class="form-content list-by">
+            <b>List by</b> 
+        </div>
         <div class="form-content">
-            <label for="state" class="form-input">List by state:</label>
             <select name="state" class="form-input dropdown" onchange="this.form.submit()">
-                <option class="name" value="{{defaultState}}">{{defaultState}}</option>
-                {{#each state}}
-                    <option class="name" value="{{State}}">{{State}}</option>
-                {{/each}}
-                <option class="name" value="All">All</option>
+                <optgroup label="State">
+                    <option class="name" value="{{defaultState}}">{{defaultState}}</option>
+                    <option class="name" value="All">All</option>
+                    {{#each state}}
+                        <option class="name" value="{{State}}">{{State}}</option>
+                    {{/each}}
+                </optgroup>   
             </select>
         </div>
         <div class="form-content">
-            <label for="native" class="form-input">List by native:</label>
             <select name="native" class="form-input dropdown" onchange="this.form.submit()">
-                <option class="name" value="{{defaultNative}}">{{defaultNative}}</option>
-                {{#each native}} 
-                    <option class="name" value="{{Native}}">{{Native}}</option>
-                {{/each}}
-                <option class="name" value="All">All</option>
+                <optgroup label="Native">
+                    <option class="name" value="{{defaultNative}}">{{defaultNative}}</option>
+                    <option class="name" value="All">All</option>
+                    {{#each native}} 
+                        <option class="name" value="{{Native}}">{{Native}}</option>
+                    {{/each}}
+                </optgroup>
             </select>
         </div>
-        <!--<input class="form-input submit-button" type="submit" value="Search">-->
     </form>
-    <hr>
-    <!--
-    <section class="sort">
-        <label for="">Sort by:</label>
-        <select class="sort-option">
-            <option value="">state: A-Z</option>
-            <option value="">State: Z-A</option>
-            <option value="">Name: A-Z</option>
-            <option value="">Name: Z-A</option>
-        </select>
-    </section>
-    -->
+<!--
+<section class="sort">
+    <label for="">Sort by:</label>
+    <select class="sort-option">
+        <option value="">state: A-Z</option>
+        <option value="">State: Z-A</option>
+        <option value="">Name: A-Z</option>
+        <option value="">Name: Z-A</option>
+    </select>
+</section>
+-->
     <section class="contact-person">
-        {{#each head}}
-        <section class="person-tile">
-            <section class="person">
-                <div class="person-info name"><b>{{Name}}</b></div>
-                <div class="person-info phone">{{Phone}}</div>
-                <br>
-                <div class="person-info"><b>Native: </b>{{Native}}, <b>Mosal: </b>{{Mosal}}</div>
-                <div class="person-info phone"><b>State: </b>{{State}}</div>
-            </section>
-            <button class="view-family" onclick="openFamily({{Family_No}})">view</button>
+        <section class="person-container">
+            {{#each head}}
+                <section class="person-tile">
+                    <section class="person">
+                        <div class="person-info name"><b>{{Name}}</b></div>
+                        <div class="person-info phone">{{Phone}}</div>
+                        <br>
+                        <div class="person-info"><b>Native: </b>{{Native}}, <b>Mosal: </b>{{Mosal}}</div>
+                        <div class="person-info phone"><b>State: </b>{{State}}</div>
+                    </section>
+                    <button class="view-family" onclick="openFamily({{Family_No}})">view</button>
+                </section>    
+            {{/each}}
         </section>
-        <section class="family" id="family{{Family_No}}">
-            <a href="javascript:void(0)" onclick="closeFamily({{Family_No}})" class="familyClosebtn">&times;</a>
-            <section class="family-details">
-                {{#each ../person}}
-                {{#if_eq Family_No ../Family_No}}
-                <section class="family-person">
-                    <div class="family-person-info"><b>{{Name}}</b></div>
-                    <div class="family-person-info">{{Relationship}}</div>
-                    <div class="family-person-info">{{Phone}}</div>
-                    <div class="family-person-info"><b>Native: </b>{{Native}}</div>
-                    <div class="family-person-info"><b>Mosal: </b>{{Mosal}}</div>
+        <section class="family-container">
+            {{#each head}}
+                <section class="family" id="family{{Family_No}}">
+                    <div class="family-header">
+                        <div class="head-name">
+                            <div class="family-header-content">family of</div>
+                            <div class="family-header-content">{{Name}}</div>
+                        </div>
+                        <a href="javascript:void(0)" onclick="closeFamily({{Family_No}})" class="familyClosebtn">&times;</a>
+                    </div>
+                    
+                    <section class="family-details">
+                        {{#each ../person}}
+                        {{#if_eq Family_No ../Family_No}}
+                        <section class="family-person">
+                            <div class="family-person-info"><b>{{Name}}</b></div>
+                            <div class="family-person-info">{{Relationship}}</div>
+                            <div class="family-person-info">{{Phone}}</div>
+                            <div class="family-person-info"><b>Native: </b>{{Native}}</div>
+                            <div class="family-person-info"><b>Mosal: </b>{{Mosal}}</div>
+                        </section>
+                        {{/if_eq}}
+                        {{/each}}
+                    </section>
                 </section>
-                {{/if_eq}}
-                {{/each}}
-            </section>
+            {{/each}}
         </section>
-        {{/each}}
     </section>
-    
-    <!--<script>alert("This are the test data...")</script>-->
     <script src="../scripts/familyDetails.js"></script>
 </main>

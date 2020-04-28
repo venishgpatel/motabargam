@@ -18,17 +18,24 @@
 
 .main {
   width: 80vw;
-  margin: 1vh auto;
+  margin: 5vh auto;
+  line-height: 1.5;
   text-align: center;
+  border-radius: 1vw;
+  -webkit-box-shadow: 0 1vw 5vw #00000060;
+          box-shadow: 0 1vw 5vw #00000060;
+  background-color: #eceff1;
 }
 
 .main .verification-info {
   margin: 2vh 0;
   text-align: justify;
+  padding: 5vh 5vw 0 5vw;
 }
 
 .main .authentication-form {
   text-align: center;
+  padding: 5vh 5vw;
 }
 
 .main .authentication-form .form-input {
@@ -42,7 +49,6 @@
 
 .main .authentication-form .email, .main .authentication-form .phone {
   width: 80%;
-  background-color: #eceff1;
 }
 
 .main .authentication-form .submit-button {
@@ -51,7 +57,15 @@
 }
 
 .main .unauthenticate {
-  margin: 2vh auto;
   color: red;
+  text-align: justify;
+  padding: 5vh 5vw;
+}
+
+@media (min-width: 1366px) {
+  .main {
+    width: 40vw;
+    margin: 10vh auto;
+  }
 }
 /*# sourceMappingURL=authenticate.css.map */

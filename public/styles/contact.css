@@ -16,13 +16,9 @@
   }
 }
 
-body {
-  width: 95vw;
-  margin: auto;
-}
-
 .main {
-  margin-top: 2vh;
+  width: 90vw;
+  margin: 3vh auto;
 }
 
 .connect-us {
@@ -38,27 +34,36 @@ body {
   width: 5%;
 }
 
-.contact-person .state {
+.contact-person .admin .state {
   background-color: #607d8b;
   text-align: center;
   margin-top: 3vh;
   padding: 1vh 0;
-  border-radius: 1vh 1vh 0 0;
+  border-radius: 1vw 1vw 0 0;
 }
 
-.contact-person .state-person {
-  border-radius: 0 0 1vh 1vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.contact-person .admin .state-person {
+  border-radius: 0 0 1vw 1vw;
   padding: 1vh 3vw;
   background-color: #eceff1;
+  line-height: 2;
 }
 
-.contact-person .state-person .person {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 2;
+@media (min-width: 1366px) {
+  .contact-person {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .contact-person .admin {
+    margin: auto 3vw;
+  }
+  .contact-person .admin .state {
+    border-radius: 1vh 1vh 0 0;
+  }
+  .contact-person .admin .state-person {
+    border-radius: 0 0 1vh 1vh;
+  }
 }
 /*# sourceMappingURL=contact.css.map */
