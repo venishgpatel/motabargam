@@ -13,4 +13,7 @@
 * Nimesh Patel
   * Software Engineer at [Google](https://www.google.com/)
   * [linkedIn](https://www.linkedin.com/in/nimeshvpatel/)
-  
+
+* Smit Patel
+  * Student at [University of Massachusetts Boston](https://www.umb.edu/)
+  * [linkedIn](https://www.linkedin.com/in/smit999/)
