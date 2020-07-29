@@ -3,50 +3,44 @@ let express = require('express');
 let hbs = require('hbs');
 let path = require('path');
 let cookieParser = require('cookie-parser');
+const session = require('express-session');
 let logger = require('morgan');
-
-let indexRouter = require('./routes/index');
-let authenticateRouter = require('./routes/authenticate');
-let memberRouter = require('./routes/member');
-let registerRouter = require('./routes/register');
-let contactRouter = require('./routes/contact');
-let matrimonyRouter = require('./routes/matrimony');
-
+let routes = require('./routes/index');
 let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-hbs.registerHelper('if_eq', function (arg1, arg2, options) {
+hbs.registerHelper('if_eq', (arg1, arg2, options) => {
   return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });
 
-hbs.registerHelper('dec', function(value, options)
-{   
-    return parseInt(value) - 1;
-});
+hbs.registerHelper('dec', (value, options) => parseInt(value) - 1);
 
-//app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({ secret: process.env.SECRET }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/authenticate', authenticateRouter);
-app.use('/member', memberRouter);
-app.use('/register', registerRouter);
-app.use('/contact', contactRouter);
-app.use('/matrimony', matrimonyRouter);
+// Flash messages
+app.use((req, res, next) => {
+  res.locals.message = req.session.message;
+  delete req.session.message;
+  next();
+});
+
+app.use('/', routes);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
   next(createError(404));
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

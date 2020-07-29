@@ -1,22 +1,13 @@
-require('dotenv').config();
 const mysql = require('mysql');
+const { databseIPAddress, databseUserName, databsePassword, databseName } = require('./config.js');
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: process.env.DATABASE_HOST_IP_ADDRESS,
-    user: process.env.DATABASE_USER_NAME,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
+    host: databseIPAddress,
+    user: databseUserName,
+    password: databsePassword,
+    database: databseName,
     multipleStatements: true
 });
-/*
-pool.getConnection((err, connection) => {
-    if (err) throw err;
-    console.log("connected!");
 
-    if (connection) connection.release();
-
-    return;
-});
-*/
 module.exports = pool;

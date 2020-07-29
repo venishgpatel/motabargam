@@ -90,8 +90,7 @@
 
 @media (min-width: #{$desktop-width}) {
     .top-header{
-        width: 100vw;
-        margin: auto;
+        margin: 0;
         height: fit-content;
         
         .title {

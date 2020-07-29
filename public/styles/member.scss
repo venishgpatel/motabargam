@@ -7,18 +7,14 @@
 }
 
 .list-form {
-    position: fixed;
-    top: 1vh;
+    position: sticky;
     width: 100vw;
+    margin: 0 auto;
     background-color: $white;
     @include flexCenter();
     justify-content: start;
     z-index: 0.5;
     background-color: $light-blue-grey;
-    border-top: solid;
-    border-width: 5vh;
-    border-color: $light-blue-grey;
-    
     
     .form-content {
         padding: 0 2vw;
@@ -63,15 +59,6 @@
     }
 }
 
-.sort {
-    text-align: right;
-    margin: 0 5vw;
-
-    .sort-option {
-        font-size: var(--regular-font);
-    }
-}
-
 .contact-person {
     display: block;
     width: 90vw;
@@ -79,9 +66,9 @@
 
     @media (min-width: #{$desktop-width}) {
         flex: 4;
-        display: flex;
-        //@include flexCenter();
-        //align-items: flex-start;
+        //display: flex;
+        @include flexCenter();
+        align-items: flex-start;
     }
 }
 

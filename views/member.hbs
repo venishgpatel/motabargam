@@ -1,5 +1,5 @@
 <main class="main">
-    <form action="/member/search" method="post" class="list-form">
+    <form action="/member/listBy" method="GET" class="list-form">
         <div class="form-content list-by">
             <b>List by</b> 
         </div>
@@ -26,17 +26,7 @@
             </select>
         </div>
     </form>
-<!--
-<section class="sort">
-    <label for="">Sort by:</label>
-    <select class="sort-option">
-        <option value="">state: A-Z</option>
-        <option value="">State: Z-A</option>
-        <option value="">Name: A-Z</option>
-        <option value="">Name: Z-A</option>
-    </select>
-</section>
--->
+    
     <section class="contact-person">
         <section class="person-container">
             {{#each head}}
@@ -80,5 +70,5 @@
             {{/each}}
         </section>
     </section>
-    <script src="../scripts/familyDetails.js"></script>
+    <script defer src="../scripts/familyDetails.js"></script>
 </main>

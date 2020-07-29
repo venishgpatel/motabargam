@@ -17,37 +17,42 @@
 }
 
 .main {
-  margin-top: 2vh;
-}
-
-.tile {
-  margin: 3vh 0;
-  padding: 0 5vw;
-}
-
-.tile .tile-header {
-  text-align: center;
-}
-
-.tile .tile-header .welcome {
-  font-size: var(--extra-large-font);
-  line-height: 1.5;
-  color: #795548;
-  font-weight: bold;
-}
-
-.tile .tile-content {
-  padding-top: 2vh;
-  text-align: justify;
-  font-weight: 500;
-  line-height: 2;
+  width: 80vw;
+  margin: 4vh auto;
 }
 
 .photo-gallery {
   text-align: center;
 }
 
-.photo-gallery .umiya-mata-photo {
-  width: 90%;
+.tile .tile-header {
+  text-align: center;
+  margin: 4vh auto;
+}
+
+.tile .tile-header .welcome {
+  font-size: var(--large-font);
+  line-height: 1.5;
+  color: #795548;
+  font-weight: bold;
+}
+
+.tile .tile-content {
+  text-align: justify;
+  line-height: 2;
+}
+
+@media (min-width: 1366px) {
+  .tile .tile-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=index.css.map */

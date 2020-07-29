@@ -1,9 +1,19 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Mota Bar Gam Kadva Patidar', css: 'index' });
-});
+const appController = require('../controllers/appController');
+const userController = require('../controllers/userController');
+const authController = require('../controllers/authController');
+
+router.get('/', appController.homePage);
+router.get('/contact', appController.contactUs);
+
+router.get('/member', appController.getMembers);
+router.get('/member/listBy', appController.getMembersByStateAndNative);
+
+router.get('/authenticate', authController.userAuthForm);
+router.post('/authenticate', authController.userAuth);
+router.get('/register', userController.register);
+router.get('/matrimony', appController.matrimony);
 
 module.exports = router;

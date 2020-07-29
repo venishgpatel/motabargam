@@ -56,12 +56,6 @@
   color: #eceff1;
 }
 
-.main .unauthenticate {
-  color: red;
-  text-align: justify;
-  padding: 5vh 5vw;
-}
-
 @media (min-width: 1366px) {
   .main {
     width: 40vw;

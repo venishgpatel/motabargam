@@ -1,18 +1,22 @@
 @import "variables";
 
 .main {
-    margin-top: 2vh;
+    width: 80vw;
+    margin: 4vh auto;
+}
+
+.photo-gallery {
+    text-align: center;
 }
 
 .tile {
-    margin: 3vh 0;
-    padding: 0 5vw;
 
     .tile-header {
         text-align: center;
+        margin: 4vh auto;
         
         .welcome {
-            font-size: var(--extra-large-font);
+            font-size: var(--large-font);
             line-height: 1.5;
             color: #795548;
             font-weight: bold;
@@ -20,17 +24,14 @@
     }
 
     .tile-content {
-        padding-top: 2vh;
         text-align: justify;
-        font-weight: 500;
         line-height: 2;
     }
-}
 
-.photo-gallery {
-    text-align: center;
-
-    .umiya-mata-photo {
-        width: 90%;
+    @media (min-width: #{$desktop-width}) {
+        
+        .tile-header {
+            @include flexCenter();
+        }
     }
 }

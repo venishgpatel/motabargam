@@ -1,0 +1,91 @@
+.alert {
+  position: relative;
+  text-align: left;
+  padding: 1vh;
+  width: 50%;
+  border: solid;
+  border-radius: 1vh;
+  margin: 1vh auto;
+  font-size: small;
+  animation: shake 0.5s;
+  animation-iteration-count: 2;
+
+  strong {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__btn--close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    padding: 0 1vh;
+    background: none;
+    color: inherit;
+    font-size: x-large;
+    outline: none;
+
+    &:active {
+      font-size: large;
+    }
+  }  
+}
+
+.alert--success {
+  color: #4caf50;
+  border-color: #4caf50;
+  background-color: #4caf5055;
+
+  strong::before {
+    content: "\2714\00A0";
+    font-size: large;
+  }
+}
+
+.alert--error {
+  color: #f44336;
+  border-color: #f44336;
+  background-color: #f4433655;
+
+  strong::before {
+    content: "\2718\00A0";
+    font-size: large;
+  }
+}
+
+.alert--warning {
+  color: #ffc107;
+  border-color: #ffc107;
+  background-color: #ffeb3b55;
+
+  strong::before {
+    content: "\26A0\00A0";
+    font-size: large;
+  }
+}
+
+.alert--info {
+  color: #2196f3;
+  border-color: #2196f3;
+  background-color: #2196f355;
+
+  strong::before {
+    content: "\2139\00A0";
+    font-size: large;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) }
+  10% { transform: translate(-1px, -2px)  }
+  20% { transform: translate(-3px, 0px) }
+  30% { transform: translate(3px, 2px) }
+  40% { transform: translate(1px, -1px) }
+  50% { transform: translate(-1px, 2px)  }
+  60% { transform: translate(-3px, 1px) }
+  70% { transform: translate(3px, 1px)  }
+  80% { transform: translate(-1px, -1px) }
+  90% { transform: translate(1px, 2px) }
+  100% { transform: translate(1px, -2px)  }
+}

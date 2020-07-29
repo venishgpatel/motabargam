@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap">
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/{{css}}.css">
+  <link rel="stylesheet" href="../styles/flash.css">
+  <script defer src="../scripts/header.js"></script>
+  <script defer src="../scripts/flash.js"></script>
 </head>
 
 <body>
@@ -32,12 +35,15 @@
     <div class="nav-bar-icon" onclick="openNavBar()">&#9776;</div>
   </header>
 
-  {{{body}}}
+  {{#if message}}
+  <div class="alert alert--{{message.type}}">
+      <strong>{{message.title}} &nbsp;:&nbsp; </strong> <span>{{message.message}}</span>
+      <button type="button" name="close" class="alert__btn--close" onclick="closeFlashMessage(`alert--{{message.type}}`)">&times;</button>
+  </div>
+  {{/if}}
 
-  <footer>
-    <section class="contact-us" id="contact-us"></section>
-  </footer>
-  <script src="../scripts/header.js"></script>
+  {{{body}}}
+  
 </body>
 
 </html>

@@ -25,9 +25,10 @@
 }
 
 .list-form {
-  position: fixed;
-  top: 1vh;
+  position: -webkit-sticky;
+  position: sticky;
   width: 100vw;
+  margin: 0 auto;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,9 +44,6 @@
           justify-content: start;
   z-index: 0.5;
   background-color: #eceff1;
-  border-top: solid;
-  border-width: 5vh;
-  border-color: #eceff1;
 }
 
 .list-form .form-content {
@@ -92,15 +90,6 @@
   }
 }
 
-.sort {
-  text-align: right;
-  margin: 0 5vw;
-}
-
-.sort .sort-option {
-  font-size: var(--regular-font);
-}
-
 .contact-person {
   display: block;
   width: 90vw;
@@ -115,6 +104,15 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 

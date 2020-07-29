@@ -1,9 +1,9 @@
-let navBar = document.getElementsByClassName("navigation")[0];
+const navBar = document.getElementsByClassName("navigation")[0];
 
-let openNavBar = function () {
+const openNavBar = () => {
     navBar.style.width = "100vw";
 }
 
-let closeNavBar = function () {
+const closeNavBar = () => {
     navBar.style.width = "0";
 }

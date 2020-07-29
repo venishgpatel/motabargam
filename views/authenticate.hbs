@@ -2,7 +2,7 @@
     <section class="verification-info">
         To view the user, you first need to verify yourself as a samaj member. After verification, you will able to view members of the samaj.
     </section>
-    <form action="/member" method="post" class="authentication-form">
+    <form action="/authenticate" method="post" class="authentication-form">
         <div class="form-content">
             <input class="form-input email" type="email" name="email" placeholder="Enter your email id">
         </div>
@@ -16,7 +16,4 @@
             <input class="form-input submit-button" type="submit" value="Submit">
         </div>
     </form>
-    <section class="unauthenticate">
-        {{unauthenticate}}
-    </section>
 </main>

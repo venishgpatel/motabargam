@@ -1,8 +1,13 @@
-let familyContainer = document.getElementsByClassName('family-container')[0];
-let personContainer = document.getElementsByClassName('person-container')[0];
+const familyContainer = document.getElementsByClassName('family-container')[0];
+const personContainer = document.getElementsByClassName('person-container')[0];
+const topHeader = document.getElementsByClassName('top-header')[0];
+const listByContainer = document.getElementsByClassName('list-form')[0];
 let count = 0;
 
-let openFamily = function (family_number) {
+const topHeaderHeight = topHeader.offsetHeight;
+listByContainer.style.top = `${topHeaderHeight}px`;
+
+let openFamily = family_number => {
     if (count === 0) {
         count++;
         let family = document.getElementById(`family${family_number}`);
@@ -19,11 +24,10 @@ let openFamily = function (family_number) {
     }
 }
 
-let closeFamily = function (family_number) {
+let closeFamily = family_number => {
     if (count === 1) {
         count--;
         let family = document.getElementById(`family${family_number}`);
-
 
         if(screen.width < 1366) {
             family.style.width = "0vw";
