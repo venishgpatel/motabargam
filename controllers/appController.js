@@ -31,6 +31,7 @@ exports.getMembers = (req, res) => {
     let person = result[1];
     let state = result[2];
     let native = result[3];
+    console.log(person);
     res.render('member', {
       title: 'Member',
       css: 'member',

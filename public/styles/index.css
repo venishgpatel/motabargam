@@ -25,6 +25,16 @@
   text-align: center;
 }
 
+.photo-gallery .umiya-mata-photo {
+  width: 80%;
+}
+
+@media (min-width: 1366px) {
+  .photo-gallery .umiya-mata-photo {
+    width: 50%;
+  }
+}
+
 .tile .tile-header {
   text-align: center;
   margin: 4vh auto;

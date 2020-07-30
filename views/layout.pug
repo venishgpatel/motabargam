@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Comfortaa&display=swap')
+    link(rel='stylesheet', href='../styles/style.css')
+    link(rel='stylesheet', href=`../styles/${css}.css`)
+    link(rel='stylesheet', href='../styles/flash.css')
+    script(defer src='../scripts/header.js')
+    script(defer src='../scripts/flash.js')
+  body
+    block header
+      header.top-header
+        .title
+          b= title
+        nav.navigation
+          a.closebtn(href='javascript:void(0)' onclick='closeNavBar()') &times;
+          .nav-list
+            a.nav-list-item(href='/') Home
+            span.vr-line-symbol &#124;
+            a.nav-list-item(href='/authenticate') Members
+            span.vr-line-symbol &#124;
+            a.nav-list-item(href='/matrimony') Matrimony
+            span.vr-line-symbol &#124;
+            a.nav-list-item(href='/contact') Contact us
+        .nav-bar-icon(onclick='openNavBar()') &#9776;
+
+    block message
+      if locals.message
+        .alert(class=`alert--${message.type}`)
+          strong= message.title 
+          span &nbsp;:&nbsp;
+          span= message.message
+        button.alert__btn--close(type='button' onclick=`closeFlashMessage('alert--${message.type}')`) &times;
+
+    block content
+
+    block scripts
+      script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API}&libraries=places`)
+      script(type='module' src='../scripts/mbgkps.js')

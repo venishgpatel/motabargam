@@ -1,0 +1,95 @@
+@import "variables";
+
+.family {
+  width: 80vw;
+  margin: 5vh auto;
+  border-radius: 1vw;
+  box-shadow: 0 1vw 5vw #00000060;
+  background-color: $light-blue-grey;
+  padding: 2vh 0;
+
+  .family-member {
+    display: grid;
+    padding: 2vh 5vw;
+
+    .family-member__info {
+      text-align: left;
+      font-size: x-small;
+      margin: 1vh;
+
+      .family-member__input {
+        border: none;
+        display: block;
+        margin: 1vh 0;
+        width: 100%;
+      }
+    }
+
+    .family-member__number {
+      grid-column: 1 / span 2;
+      grid-row: 1
+    }
+    .family-member__name {
+      grid-column: 1 / span 4;
+      grid-row: 2
+    }
+    .family-member__relationship {
+      grid-column: 1 / span 4;
+      grid-row: 3
+    }
+    .family-member__gender {
+      grid-column: 1 / span 4;
+      grid-row: 4
+    }
+    .family-member__age {
+      grid-column: 1 / span 4;
+      grid-row: 5
+    }
+    .family-member__native {
+      grid-column: 1 / span 2;
+      grid-row: 6
+    }
+    .family-member__mosal {
+     grid-column: 3 / span 2;
+      grid-row: 6
+    }
+    .family-member__address {
+      grid-column: 1 / span 4;
+      grid-row: 8
+    }
+    .family-member__city {
+      grid-column: 1 / span 4;
+      grid-row: 9
+    }
+    .family-member__state {
+      grid-column: 1 / span 4;
+      grid-row: 10
+    }
+    .family-member__occupation {
+      grid-column: 1 / span 4;
+      grid-row: 11
+    }
+    .family-member__phone {
+      grid-column: 1 / span 4;
+      grid-row: 12
+    }
+    .family-member__email {
+      grid-column: 1 / span 4;
+      grid-row: 13
+    }
+    .family-member__status {
+      grid-column: 1 / span 4;
+      grid-row: 14
+    }
+  }
+  
+  .family__submit {
+    border: none;
+    outline: none;
+    background-color: $dark-blue-grey;
+    color: $light-blue-grey;
+    padding: 1vw;
+    font-size: x-large;
+    border-radius: 1vw;
+  }
+}

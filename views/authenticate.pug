@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  main.main
+    section.verification-info To view the user, you first need to verify yourself as a samaj member. After verification, you will able to view members of the samaj.
+    form.authentication-form(action='/authenticate' method='POST')
+      .form-content
+        input.form-input.email(type='email' name='email' placeholder='Enter your email id')
+      .form-content or
+      .form-content
+        input.form-input.phone(type='tel' name='phone' placeholder='Enter your phone number')
+      .form-content
+        input.form-input.submit-button(type='submit' value='Submit')

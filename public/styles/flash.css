@@ -1,10 +1,28 @@
+:root {
+  --extra-small-font: 2vw;
+  --small-font: 2.5vw;
+  --regular-font: 3vw;
+  --large-font: 4.5vw;
+  --extra-large-font: 8vw;
+}
+
+@media (min-width: 1366px) {
+  :root {
+    --extra-small-font: 0.8vw;
+    --small-font: 1vw;
+    --regular-font: 1.2vw;
+    --large-font: 1.5vw;
+    --extra-large-font: 3vw;
+  }
+}
+
 .alert {
   position: relative;
   text-align: left;
   padding: 1vh;
-  width: 50%;
   border: solid;
   border-radius: 1vh;
+  width: 80%;
   margin: 1vh auto;
   font-size: small;
   -webkit-animation: shake 0.5s;
@@ -32,6 +50,12 @@
 
 .alert__btn--close:active {
   font-size: large;
+}
+
+@media (min-width: 1366px) {
+  .alert {
+    width: 50%;
+  }
 }
 
 .alert--success {

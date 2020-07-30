@@ -1,0 +1,48 @@
+mixin addMember()
+  .family-member(class=`${relationShip}`)
+    .family-member__info.family-member__number
+      label(for='familyNo') Family No
+      input.family-member__input(type='number' name='familyNo')
+    .family-member__info.family-member__name
+      label(for='name') Name
+      input.family-member__input(type='text' name='name' required)
+    .family-member__info.family-member__relationship
+      label(for='relationShip') RelationShip
+      input.family-member__input(type='text' name='relationShip')
+    .family-member__info.family-member__gender
+      label(for='gender') Gender:
+      .family-member__input
+        input(type='radio' id='male' name='gender' value='M')
+        label(for='male') Male
+        input(type='radio' id='female' name='gender' value='F')
+        label(for='female') Female
+    .family-member__info.family-member__age
+      label(for='age') age
+      input.family-member__input(type='number' name='age')
+    .family-member__info.family-member__native
+      label(for='native') native
+      input.family-member__input(type='text' name='native')
+    .family-member__info.family-member__mosal
+      label(for='mosal') mosal
+      input.family-member__input(type='text' name='mosal')
+    .family-member__info.family-member__address
+      label(for='address') Address
+      input.family-member__input(id='address' type='text' name='address')
+    .family-member__info.family-member__city
+      label(for='city') city
+      input.family-member__input(type='text' name='city')
+    .family-member__info.family-member__state
+      label(for='state') state
+      input.family-member__input(type='text' name='state')
+    .family-member__info.family-member__occupation
+      label(for='occupation') occupation
+      input.family-member__input(type='text' name='occupation')
+    .family-member__info.family-member__phone
+      label(for='phone') phone
+      input.family-member__input(type='tel' name='phone')
+    .family-member__info.family-member__email
+      label(for='email') Email
+      input.family-member__input(type='email' name='email' required) 
+    .family-member__info.family-member__status
+      label(for='status') status
+      input.family-member__input(type='text' name='status')

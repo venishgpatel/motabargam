@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .main
+    section
+      .connect-us
+        a(href='mailto:motabargamkps.usa@gmail.com')
+          img.contact-icon(src='../images/icon/email.png') 
+          span motabargamkps.usa@gmail.com
+      .connect-us
+        a(target='_blank' href='https://www.facebook.com/Mota-Bar-Gam-Kadva-Patidar-Samaj-USA-113943003596223/')
+          img.contact-icon(src='../images/icon/facebook.png' alt='facebook' ) 
+          span Mota Bar Gam Kadva Patidar Samaj - USA
+    section.contact-person
+      each person in admin
+        .admin
+          .state
+            b= person.State
+          .state-person
+            .person
+              .name
+                b= person.Name
+              .email= person.Email
+              .phone-number= person.Phone

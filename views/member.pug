@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  main.main
+    form.list-form(action='/member/listBy' method='GET')
+      .form-content.list-by
+        b List by
+      .form-content
+        select.form-input.dropdown(name='state' onchange='this.form.submit()')
+          optgroup(label='State')
+            option.name(value=`${defaultState}`)= defaultState
+            option.name(value='All') All
+            each s in state
+              option.name(value=`${s.State}`)= s.State
+      .form-content
+        select.form-input.dropdown(name='native' onchange='this.form.submit()')
+          optgroup(label='Native')
+            option.name(value=`${defaultNative}`)= defaultNative
+            option.name(value='All') All
+            each n in native
+              option.name(value=`${n.Native}`)= n.Native
+    section.contact-person
+      section.person-container
+        each person in head
+          section.person-tile
+            .person
+              .person-info.name
+                b= person.Name
+              .person-info.phone= person.Phone
+              br
+              .person-info.native
+                b Native: #{person.Native},
+                b Mosal: #{person.Mosal}
+              .person-info.state
+                b State: #{person.State}
+            button.view-family(onclick=`openFamily(${person.Family_No})`) view
+      section.family-container
+        each h in head
+          section.family(id=`family${h.Family_No}`)
+            .family-header
+              .head-name
+                .family-header-content Family of
+                .family-header-content= h.Name
+              a.familyClosebtn(href='javascript:void(0)' onclick=`closeFamily(${h.Family_No})`) &times;
+            section.family-details
+              each p in person
+                if (p.Family_No == h.Family_No)
+                  section.family-person
+                    .family-person-info
+                      b= p.Name
+                    .family-person-info= p.Relationship
+                    .family-person-info= p.Phone
+                    .family-person-info
+                      b Native: #{p.Native}
+                    .family-person-info
+                      b Mosal: #{p.Mosal}
+      script(defer src='../scripts/familyDetails.js')

@@ -1,0 +1,9 @@
+extends layout
+
+include mixins/_addMember
+
+block content
+  main.main
+    form.family(action='/family/add' method="POST")
+      +addMember()
+      input.family__submit(type='submit' value='Submit')

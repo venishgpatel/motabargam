@@ -1,10 +1,12 @@
+@import "variables";
+
 .alert {
   position: relative;
   text-align: left;
   padding: 1vh;
-  width: 50%;
   border: solid;
   border-radius: 1vh;
+  width: 80%;
   margin: 1vh auto;
   font-size: small;
   animation: shake 0.5s;
@@ -30,6 +32,10 @@
       font-size: large;
     }
   }  
+
+  @media (min-width: #{$desktop-width}) {
+    width: 50%;
+  }
 }
 
 .alert--success {
